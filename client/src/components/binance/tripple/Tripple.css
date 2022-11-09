@@ -1,0 +1,352 @@
+:link {text-decoration: none}
+
+.bigLogoText {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+
+    color: #000000;
+
+    margin-top: 10px;
+}
+
+.littleLogoText {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+
+    color: #000000;
+}
+
+.logoBox {
+    text-align: center;
+    height: 100px;
+}
+
+.linkBox {
+    display: flex;
+    flex-direction: row;
+}
+
+.infoLogo {
+    width: 10px;
+    color: #8F8F8F;
+}
+
+.nicknameLogo {
+    width: 15px;
+    margin-right: 5px;
+}
+
+.settingsBar{
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.depositBox {
+    width: 300px;
+}
+
+.settingsBox {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    width: 450px;
+}
+
+.settingTagsBox {
+    display: flex;
+    flex-direction: row;
+}
+
+.filterBox {
+    display: flex;
+    flex-direction: row;
+}
+
+.passiveBank{
+    font-family: 'Source Sans Pro', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    /* identical to box height */
+
+    color: #000000;
+
+    padding: 10px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+
+    background: #EEEEEE;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    border: none;
+}
+
+.activeBank{
+    font-family: 'Source Sans Pro', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    /* identical to box height */
+
+    color: #FFFFFF;
+
+    padding: 10px;
+    margin: 5px;
+
+    background: #4477E0;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    border: none;
+}
+
+.blockedBank{
+    font-family: 'Source Sans Pro', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    /* identical to box height */
+
+    color: #FFFFFF;
+
+    padding: 10px;
+    margin: 5px;
+
+    background: #EB544D;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+
+.lowTitle {
+    font-family: 'Source Sans Pro', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+
+    color: #404040;
+
+    margin-bottom: 10px;
+}
+
+.depositInput {
+
+    margin-bottom: 10px;
+    padding: 5px;
+
+    outline: none;
+
+    font-family: 'Source Sans Pro', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+
+    text-align: center;
+
+    color: #000000;
+
+    background: #EEEEEE;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    border: none;
+}
+
+.tableTitles{
+    display: flex;
+    flex-direction: row;
+
+    margin-left: 20%;
+
+    width: 100%;
+    align-content: center;
+
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 26px;
+
+    color: #000000;
+}
+
+
+.buyBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+
+    width: 250px;
+    height: 100px;
+
+    padding: 10px;
+}
+
+.bundleList {
+    margin-left: 20%;
+}
+
+.buyLine {
+    display: flex;
+    flex-direction: row;
+}
+
+.boldText {
+    font-family: 'Source Sans Pro', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    /* identical to box height */
+
+    text-align: left;
+
+    color: #000000;
+}
+
+.tinyText{
+    font-family: 'Source Sans Pro', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    /* identical to box height */
+
+    text-align: left;
+
+    color: #8F8F8F;
+
+}
+
+.priceBox {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.priceText {
+    font-family: 'Source Sans Pro', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    /* identical to box height */
+
+
+    color: #54B387;
+}
+
+.midBox {
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 30px;
+    margin-right: 10px;
+
+    width: 267px;
+    height: 120px;
+    padding: 10px;
+}
+
+.resultBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    width: 130px;
+    height: 120px;
+
+    padding: 10px;
+}
+
+.menuLine {
+    width: 100%;
+    border: 0.1px solid #DDDDDD;
+}
+
+.menuText{
+    font-family: 'Source Sans Pro', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    /* identical to box height */
+
+    text-align: left;
+
+    margin-left: 1%;
+    margin-right: 11%;
+    margin-bottom: 1%;
+    color: #8F8F8F;
+
+}
+
+.buttonBox {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+.acceptButton{
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+
+    height: 45px;
+
+    padding: 10px;
+    margin-right: 10px;
+
+    color: #FFFFFF;
+
+    background: #4477E0;
+    border-radius: 5px;
+    border: none;
+}
+
+.declineButton{
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+
+    height: 45px;
+
+    padding: 10px;
+
+    color: #4477E0;
+
+    background: #F0F5FD;
+    border-radius: 5px;
+    border: none;
+}
+
+.tableLowTitles {
+    margin-left: 30px;
+    font-family: 'Source Sans Pro', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: black;
+
+}
+
+.loadingText {
+    height: 45px;
+}

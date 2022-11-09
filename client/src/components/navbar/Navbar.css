@@ -1,0 +1,97 @@
+.Navbar {
+    display: flex;
+    flex-direction: row;
+}
+
+.menuPart {
+    width: 650px;
+}
+
+.logoText {
+    margin-top: 30px;
+    margin-left: 70px;
+    margin-bottom: 70px;
+
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 60px;
+
+    color: #000000;
+}
+
+.lowText {
+    margin-left: 70px;
+
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    /* identical to box height */
+
+    color: #404040;
+}
+
+.normalText {
+    margin-left: 70px;
+    margin-top: 10px;
+
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 50px;
+
+    color: #000000;
+
+}
+
+.newsBox {
+    display: flex;
+    flex-direction: column;
+    padding-top: 200px;
+    padding-left: 100px;
+
+    overflow-y: auto;
+
+    height: 770px;
+    width: 800px;
+}
+
+.postImage {
+    width: 500px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.postTitle {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+
+    color: #000000;
+}
+
+.postAnons {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+
+    color: #000000;
+
+}
+
+.newsLine {
+    border: 1px solid #DDDDDD;
+    margin-top: 30px;
+ }
+
+.newsLoadingText {
+    width: 300px;
+}
+
+:link{color: black}

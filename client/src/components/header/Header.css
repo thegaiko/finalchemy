@@ -1,0 +1,26 @@
+.currencyBox {
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.symbol {
+    font-family: 'Source Sans Pro', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+
+    margin-right: 5px;
+    margin-left: 30px;
+}
+
+.price {
+    font-family: 'Source Sans Pro', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+}

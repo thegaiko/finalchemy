@@ -1,0 +1,21 @@
+.doubleBundleList {
+    margin-left: 30%;
+}
+
+.doubleTableTitles{
+    display: flex;
+    flex-direction: row;
+
+    margin-left: 30%;
+
+    width: 100%;
+    align-content: center;
+
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 26px;
+
+    color: #000000;
+}
