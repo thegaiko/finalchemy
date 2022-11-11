@@ -36,18 +36,17 @@ function Auth() {
 
     return (
         <div className='authPage'>
-            <div className='logoBar'>
-                <div className='logo'>Ф</div>
-                <div className='logoBoxText'>финансовая <br/>алхимия</div>
-            </div>
             <div className='tokenBox'>
+                <div className='logoBar'>
+                    <div className='logo'>Ф</div>
+                    <div className='logoBoxText'>финансовая <br/>алхимия</div>
+                </div>
                 <div className='inputTyping'>
                     <input className='tokenInput' placeholder='Введите ваш токен.'  value={token} onChange={event => setToken(event.target.value)} type="num" id="message" name="message" />
                     <button className='authBtnBox' onKeyDown={(e) => handler(e)} onClick={() => fetchData(token)}>
                         <img className='authBtn' src={btnIcon} alt="" />
                     </button>
-                </div>
-                <div className='inputBox'></div>
+                </div> 
             </div>
         </div>
     );

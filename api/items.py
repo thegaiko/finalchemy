@@ -21,13 +21,18 @@ def get_news():
     result = response.json()['items']
     news = []
     for i in range(len(result)):
+        try:
+            img = result[i]['image']['url']
+        except KeyError:
+            img = '-'
+        
         news.append(
             {
                 "text": result[i]['title'],
                 "anons": result[i]['anons'],
                 "link": result[i]['fronturl'],
                 "author": result[i]['partner']['title'],
-                "url": result[i]['image']['url'],
+                "url": img,
             }
         )
     return news

@@ -18,7 +18,7 @@ function Header() {
     }, [])
 
     return (
-        <Marquee>
+        <Marquee pauseOnHover={true}>
             {currency.map(currency => (
                 <div className='currencyBox'>
                     <div className='symbol'>{currency.symbol}: </div>

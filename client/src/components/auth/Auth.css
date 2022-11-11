@@ -1,9 +1,6 @@
 @media screen and (min-width: 600px){
     .tokenBox {
-
-        margin-top: 70vh;
-        margin-left: 100px;
-    
+        padding-left: 10vh;
     
     }
 
@@ -13,8 +10,10 @@
     
         align-items: center;
     
-        height: 100px;
-        width: 500px;
+        height: 50px;
+        width: 300px;
+
+        margin-top: 40vh;
     
     
         background: #FFFFFF;
@@ -28,10 +27,9 @@
         font-family: 'Source Sans Pro';
         font-style: normal;
         font-weight: 600;
-        font-size: 40px;
+        font-size: 16px;
     
-        height: 80px;
-        width: 350px;
+        width: 230px;
     
         margin-left: 20px;
     
@@ -48,10 +46,9 @@
         cursor: pointer;
         outline: inherit;
         
-        width: 80px;
-        height: 80px;
+        margin-top: 3px;
+        width: 40px;
     
-        margin-left: 35px;
     }
 
 }
@@ -99,8 +96,6 @@
     .authBtn {    
         width: 40px;
         height: 40px;
-        margin-top: 5px;
-        margin-left: 30px;
     }
 
 
@@ -117,7 +112,7 @@
 }
 
 .authPage {
-    background-image: url("../../svg/authBackgroun1.png");
+    background-image: url("../../svg/bg_loop.gif");
     /* Full height */
     height: 100vh; 
 
@@ -130,10 +125,7 @@
 .logoBar {
     display: flex;
     flex-direction: row;
-
     align-items: center;
-
-    margin-left: 5vw;
 }
 
 .logo {
