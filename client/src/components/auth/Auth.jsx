@@ -1,47 +1,53 @@
 import './Auth.css';
-import React, {useRef, useState} from "react";
+import React, {useState} from "react";
 import { useNavigate } from 'react-router-dom';
+import btnIcon from "../../svg/authButton.png"
+import domain from '../../config'
 import axios from "axios";
 
 function Auth() {
-    const [result, setResult] = useState([])
+    const [token, setToken] = useState()
 
-    const inputRef = useRef(null);
-    const [updated, setUpdated] = useState('');
-    
     const navigate = useNavigate()
 
-    const handleClick = () => {
-        setUpdated(inputRef.current.value);
-    };
-
     const fetchData = async(token) => {
-        handleClick()
         try{
-            const {data} = await axios.post('http://0.0.0.0:8000/api/check_token/', {
+            const {data} = await axios.post('api/check_token/', {
                 "TOKEN": token
             })
-            setResult(data)
+            console.log(data)
+            if (data === true){
+                localStorage.setItem("token", token)
+                navigate('/home')
+            }
 
         } catch(error) {
             console.log(error)
         }
-        console.log(result)
-        if (result === true){
-            navigate('/home')
-        }
         
     }
 
+    const handler = (event) => {
+        console.log(event)
+        if (event.key === 'Enter'){
+            fetchData(token);
+        }
+    }
+
     return (
-        <div>
-            <div className='menuPart'>
-                <div className='logoText'>Финансовая алхимия</div>
-
-                <div className='lowText'>Авторизация</div>
-                <input className='depositInput' ref={inputRef} type="num" id="message" name="message" />
-
-                <button className='normalText' onClick={() => fetchData(updated)}>Войти</button>
+        <div className='authPage'>
+            <div className='logoBar'>
+                <div className='logo'>Ф</div>
+                <div className='logoBoxText'>финансовая <br/>алхимия</div>
+            </div>
+            <div className='tokenBox'>
+                <div className='inputTyping'>
+                    <input className='tokenInput' placeholder='Введите ваш токен.'  value={token} onChange={event => setToken(event.target.value)} type="num" id="message" name="message" />
+                    <button className='authBtnBox' onKeyDown={(e) => handler(e)} onClick={() => fetchData(token)}>
+                        <img className='authBtn' src={btnIcon} alt="" />
+                    </button>
+                </div>
+                <div className='inputBox'></div>
             </div>
         </div>
     );

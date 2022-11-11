@@ -34,6 +34,10 @@ async def get_price(asset, bank, transAmount, tradeType):
             adv = await resp.json()
             adv = adv['data'][0]
 
+    pprint(adv)
+    bankList = []
+    for bank in adv['adv']['tradeMethods']:
+        bankList.append(bank['tradeMethodName'])
     userNo = adv['advertiser']['userNo']
     return {
         "order": {
@@ -42,7 +46,7 @@ async def get_price(asset, bank, transAmount, tradeType):
             "suply": adv['adv']['surplusAmount'],
             "max": adv['adv']['maxSingleTransAmount'],
             "min": adv['adv']['minSingleTransAmount'],
-            "bank": adv['adv']['tradeMethods'][0]['tradeMethodName'],
+            "bank": bankList,
         },
         "user": {
             "link": f'https://p2p.binance.com/ru/advertiserDetail?advertiserNo={userNo}',

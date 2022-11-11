@@ -2,6 +2,7 @@ import asyncio
 from binance import get_price, get_spot_price
 from aiohttp import ClientSession
 import nest_asyncio
+from items import check_token
 
 nest_asyncio.apply()
 

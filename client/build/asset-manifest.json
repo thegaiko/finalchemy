@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fd6ab46f.css",
+    "main.js": "/static/js/main.494c2230.js",
+    "static/media/authBackgroun1.png": "/static/media/authBackgroun1.10813f0b912de0b195b5.png",
+    "index.html": "/index.html",
+    "static/media/loadingSvg.svg": "/static/media/loadingSvg.65f59f088c376c426c7a0ddf93df7499.svg",
+    "static/media/link.svg": "/static/media/link.e0ef77d8f7471b57be2f34697be4e77d.svg",
+    "static/media/info.svg": "/static/media/info.4acd24eb05a34874bd0e3cb537f4ca29.svg",
+    "main.fd6ab46f.css.map": "/static/css/main.fd6ab46f.css.map",
+    "main.494c2230.js.map": "/static/js/main.494c2230.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fd6ab46f.css",
+    "static/js/main.494c2230.js"
+  ]
+}

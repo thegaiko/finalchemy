@@ -1,5 +1,5 @@
 import './Navbar.css';
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import React, {useState} from "react";
 import axios from "axios";
 import loadingSvg from "../../svg/loadingSvg.svg";
@@ -9,10 +9,17 @@ function Navbar() {
         const [news, setNews] = useState([])
         const [loading, setLoading] = useState(true)
 
+        const navigate = useNavigate()
+        const token = localStorage.getItem("token")
+        console.log(token)
+        if (token === null){
+                navigate('/')
+        }
+
         React.useEffect(() => {
                 const fetchData = async() => {
                         try{
-                                const {data} = await axios.get('http://0.0.0.0:8000/api/get_news/', )
+                                const {data} = await axios.get('/api/get_news/', )
                                 setNews(data)
                         } catch(error) {
                                 console.log(error)

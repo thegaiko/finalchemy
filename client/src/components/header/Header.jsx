@@ -8,7 +8,7 @@ function Header() {
     React.useEffect(() => {
         const fetchData = async() => {
             try{
-                const {data} = await axios.get('http://0.0.0.0:8000/api/get_currency/', )
+                const {data} = await axios.get('/api/get_currency/', )
                 setCurrency(data)
             } catch(error) {
                 console.log(error)

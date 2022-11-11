@@ -5,27 +5,35 @@ import info from "../../../svg/info.svg"
 import loadingSvg from "../../../svg/loadingSvg.svg"
 import './Double.css'
 import Header from "../../header/Header";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 function Double() {
     const [company, setCompany] = useState([])
     const [loading, setLoading] = useState(true)
 
-    const [bankList, setBankList] = useState([])
-    const [symbolList, setSymbolList] = useState([])
+    const [bankList, setBankList] = useState(["TinkoffNew", "RosBankNew", "RaiffeisenBank", "QIWI"])
+    const [symbolList, setSymbolList] = useState(["USDT", "BUSD", "BNB", "ETH", "BTC"])
 
     const inputRef = useRef(null);
 
     const [updated, setUpdated] = useState('');
 
+    const navigate = useNavigate();
+
     const handleClick = () => {
         setUpdated(inputRef.current.value);
     };
 
+    const token = localStorage.getItem("token")
+    console.log(token)
+    if (token === null){
+        navigate('/')
+    }
+
     React.useEffect(() => {
         const fetchData = async(bankList) => {
             try{
-                const {data} = await axios.post('http://0.0.0.0:8000/api/get_double_bundle/', {
+                const {data} = await axios.post('/api/get_double_bundle/', {
                     "BANKS_LIST": ["TinkoffNew", "RosBankNew", "RaiffeisenBank", "QIWI"],
                     "ASSET_LIST": ["USDT", "BTC", "BNB", "ETH", "BUSD"],
                     "AMOUNT": 10000
@@ -44,9 +52,10 @@ function Double() {
 
     const fetchData = async(bankList, symbolList) => {
         handleClick()
+        console.log(token)
         setLoading(true)
         try{
-            const {data} = await axios.post('http://0.0.0.0:8000/api/get_triple_bundle/', {
+            const {data} = await axios.post('/api/get_triple_bundle/', {
                 "BANKS_LIST": bankList,
                 "ASSET_LIST": symbolList,
                 "AMOUNT": updated
@@ -103,7 +112,7 @@ function Double() {
             <div className='settingsBar'>
                 <div>
                     <div className='depositBox'>
-                        <input className='depositInput' ref={inputRef} type="num" id="message" name="message" />
+                        <input className='depositInput' placeholder="10000" ref={inputRef} type="num" id="message" name="message" />
                         <div className='lowTitle'>Введите ваш депозит *по умолчанию 10.000</div>
                         <div className='buttonBox'>
                             <button className='acceptButton' onClick={() => fetchData(bankList, symbolList)}>Применить</button>
@@ -122,7 +131,7 @@ function Double() {
                         <div className='lowTitle'>Выберите необходимые способы оплаты  *по умолчанию выбраны все </div>
                         <div className='filterBox'>
                             {bankList.map(bank => (
-                                <div className='activeBank'>{bank}</div>
+                                <div key={bank} className='activeBank'>{bank}</div>
                             ))}
                         </div>
                     </div>
@@ -140,7 +149,7 @@ function Double() {
                         <div className='lowTitle'>Выберите препочитаемые для торговли валюты  *по умолчанию выбраны все</div>
                         <div className='filterBox'>
                             {symbolList.map(symbol => (
-                                <div className='activeBank'>{symbol}</div>
+                                <div key={symbol} className='activeBank'>{symbol}</div>
                             ))}
                         </div>
                     </div>
@@ -148,17 +157,17 @@ function Double() {
             </div>
 
             <div>
-                <div className='doubleTableTitles'>
-                    <div className='menuText'>ПОКУПАЕМ НА P2P</div>
-                    <div className='menuText'>ПРОДАЕМ НА P2P</div>
-                    <div className='menuText'>РЕЗУЛЬТАТ</div>
+            <div className='tableTitles'>
+                    <div className='boyBoxHeader'>ПОКУПАЕМ НА P2P</div>
+                    <div className='boyBoxHeader'>ПРОДАЕМ НА P2P</div>
+                    <div className='resultBoxHeader'>РЕЗУЛЬТАТ</div>
                 </div>
                 <div className='menuLine'></div>
             </div>
 
             <div className='doubleBundleList'>
                 {company.map(company => (
-                    <div>
+                    <div key={company}>
                         <div className='buyLine'>
                             <div className='buyBox'>
                                 <div className='priceBox'>

@@ -25,6 +25,7 @@ app.add_middleware(
 
 
 class Triple_bundle_model(BaseModel):
+    TOKEN: str;
     BANKS_LIST: list;
     ASSET_LIST: list;
     AMOUNT: int;

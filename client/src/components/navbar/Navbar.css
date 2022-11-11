@@ -56,8 +56,8 @@
 
     overflow-y: auto;
 
-    height: 770px;
-    width: 800px;
+    max-height: 80vh;
+    width: 30vw;
 }
 
 .postImage {

@@ -1,0 +1,10 @@
+.App {
+    height: 100%;
+}
+html {
+    overflow: hidden;
+}
+
+@viewport {
+    viewport-fit: cover;
+  }
