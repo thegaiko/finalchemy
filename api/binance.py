@@ -34,7 +34,6 @@ async def get_price(asset, bank, transAmount, tradeType):
             adv = await resp.json()
             adv = adv['data'][0]
 
-    pprint(adv)
     bankList = []
     for bank in adv['adv']['tradeMethods']:
         bankList.append(bank['tradeMethodName'])
